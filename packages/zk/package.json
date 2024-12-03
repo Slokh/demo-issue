@@ -1,0 +1,19 @@
+{
+  "name": "@demo/zk",
+  "version": "0.0.1",
+  "private": true,
+  "types": "./src",
+  "main": "src/index.ts",
+  "scripts": {
+    "compile": "cd circuits/verify-action && nargo compile && cd ../..",
+    "build": "cd circuits/verify-action && ./build.sh && cd ../..",
+    "test-proofs": "bun run scripts/test-proofs.ts"
+  },
+  "dependencies": {
+    "@aztec/bb.js": "^0.61.0",
+    "@noir-lang/noir_js": "^0.38.0",
+    "@zk-kit/lean-imt": "^2.2.1",
+    "poseidon-lite": "^0.3.0",
+    "viem": "^2.21.53"
+  }
+}

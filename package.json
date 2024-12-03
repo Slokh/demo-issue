@@ -1,0 +1,13 @@
+{
+  "name": "demo",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "build": "bun run --filter '**' build",
+    "next:dev": "bun run --filter @demo/next dev",
+    "api:dev": "bun run --filter @demo/api dev",
+    "zk:compile": "bun run --filter @demo/zk compile",
+    "zk:build": "bun run --filter @demo/zk build",
+    "zk:test": "bun run --filter @demo/zk test-proofs"
+  }
+}
